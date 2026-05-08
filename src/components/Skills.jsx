@@ -77,13 +77,19 @@ function Skills() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.3 }}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.5 + index * 0.05, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
               className="group rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 sm:p-8 text-center shadow-2xl shadow-cyan-500/5 transition-all hover:-translate-y-1 hover:border-cyan-400/40"
             >
               <div className="mb-5 text-5xl sm:text-6xl text-cyan-300 transition-colors group-hover:text-cyan-200">
@@ -92,7 +98,7 @@ function Skills() {
               <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

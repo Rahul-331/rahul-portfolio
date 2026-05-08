@@ -6,21 +6,45 @@ function About() {
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-12 lg:grid-cols-[1.25fr_0.85fr] items-start">
           <motion.div
-            initial={{ opacity: 0, y: 80 }}
+            initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="space-y-8"
           >
             <div>
-              <p className="text-sm uppercase tracking-[0.4em] text-cyan-300">About Me</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-white">Professional focus with technical depth</h2>
+              <motion.p
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
+                className="text-sm uppercase tracking-[0.4em] text-cyan-300"
+              >
+                About Me
+              </motion.p>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-white"
+              >
+                Professional focus with technical depth
+              </motion.h2>
             </div>
 
-            <p className="text-xl leading-9 text-slate-300">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-xl leading-9 text-slate-300"
+            >
               I am an Electronics and Communication Engineering student with a strong focus on VLSI design, embedded systems, and full-stack React development. I blend hardware expertise with modern software practices to build polished, production-ready solutions.
-            </p>
+            </motion.p>
 
-            <div className="grid gap-4 sm:grid-cols-2 text-slate-300">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="grid gap-4 sm:grid-cols-2 text-slate-300"
+            >
               <div className="rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-cyan-500/5">
                 <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">Areas of Expertise</p>
                 <p className="mt-4 text-lg font-semibold">VLSI, Embedded Systems, AI, React</p>
@@ -29,7 +53,7 @@ function About() {
                 <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">Approach</p>
                 <p className="mt-4 text-lg font-semibold">Clean UI, strong logic, scalable systems</p>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
