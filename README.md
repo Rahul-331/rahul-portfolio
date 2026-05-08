@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website built with React and Vite, showcasing projects, skills, and experience with smooth animations and beautiful design.
 
+## 🌐 Live Demo
+
+**[View Portfolio Live](https://rahul-portfolio-hipu282xm-rahul-331s-projects.vercel.app/)**
+
 ## ✨ Features
 
 - **Responsive Design** - Mobile-first approach that works seamlessly on all devices
